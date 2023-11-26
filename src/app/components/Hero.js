@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import bmfLogo from "../../../public/bmfLogo.png"
+import bmfDrop from "../../../public/bmfDrop.png"
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -24,13 +24,8 @@ export default function Example() {
               <span className="sr-only">Burdier Mobile Phlebotomy</span>
               <Image 
                 className='h-20 w-auto'
-                src={bmfLogo}
+                src={bmfDrop}
               />
-              {/* <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              /> */}
             </a>
           </div>
           <div className="flex lg:hidden">
