@@ -20,48 +20,50 @@ export default function Example() {
     <div className="bg-white">
       <div className="">
         <header className="absolute inset-x-0 top-0 z-50">
-          <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-            <div className="flex lg:flex-1 ">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Burdier Mobile Phlebotomy</span>
-                <Image 
-                  className='h-10 w-auto'
-                  src={bmfLogoP}
-                />
-              </a>
-            </div>
-            <div className="flex lg:hidden ">
-              <button
-                type="button"
-                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-                onClick={() => setMobileMenuOpen(true)}
-              >
-                <span className="sr-only">Open main menu</span>
-                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-              </button>
-            </div>
-            <div className="hidden lg:flex lg:gap-x-12 ">
-              {navigation.map((item) => (
-                <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
-                  {item.name}
-                </a>
-              ))}
-            </div>
-            <div className="hidden lg:flex lg:flex-1 lg:justify-end ">
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-              </a>
-            </div>
-          </nav>
+          <div className='fixed w-full top-0 backdrop-blur-md bg-neutral-100/10'>
+              <nav className="flex items-center justify-between p-2 lg:px-8" aria-label="Global">
+                  <div className="flex lg:flex-1">
+                    <a href="#" className="-m-1.5 p-1.5">
+                      <span className="sr-only">Burdier Mobile Phlebotomy</span>
+                      <Image 
+                        className='h-10 w-auto'
+                        src={bmfLogoP}
+                      />
+                    </a>
+                  
+                </div>
+                <div className="flex lg:hidden ">
+                  <button
+                    type="button"
+                    className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                    onClick={() => setMobileMenuOpen(true)}
+                  >
+                    <span className="sr-only">Open main menu</span>
+                    <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                  </button>
+                </div>
+                <div className="hidden lg:flex lg:gap-x-12 ">
+                  {navigation.map((item) => (
+                    <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+                <div className="hidden lg:flex lg:flex-1 lg:justify-end ">
+                  <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+                  </a>
+                </div>
+              </nav>
+          </div>
           <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
             <div className="fixed inset-0 z-50" />
             <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
                   <span className="sr-only">BMF</span>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt=""
+                  <Image 
+                  className="h-12 w-auto"
+                  src={bmfLogoDropP}
                   />
                 </a>
                 <button
@@ -110,11 +112,11 @@ export default function Example() {
             <div className="text-center">
               <div className='flex items-center justify-between'>
                 <Image 
-                  className='h-80 w-auto -mr-12 sm:-mr-12 -mt-16 drop-shadow-xl border-s-orange-700 '
+                  className='lg:h-80 md:h-80 sm:h-50 w-auto -mr-12 sm:-mr-12 -mt-16 drop-shadow-xl border-s-orange-700 '
                   src={bmfLogoDropP}
                 />
 
-                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl font-serif drop-shadow-xl">
+                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl font-serif drop-shadow-xl sm:-pr-8">
                   Burdier Mobile Phlebotomy
                 </h1>
               </div>
@@ -126,7 +128,7 @@ export default function Example() {
                   href="#"
                   className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  Get started
+                  Scheduling
                 </a>
                 <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
                   Learn more <span aria-hidden="true">→</span>
