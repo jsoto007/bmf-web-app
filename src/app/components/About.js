@@ -1,4 +1,6 @@
 import React from 'react';
+import bmfBackground from '../../../public/bmfBackground.jpg'
+import Image from 'next/image';
 
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 
@@ -46,10 +48,9 @@ export default function About() {
         {/* This is the photo in the middle of the page */}
         <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <div className='bg-sky-700 w-[48rem]  sm:w-[57rem] max-w-none rounded-xl'>
-            <img
+            <Image
               className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] opacity-70"
-              src="https://img.freepik.com/free-photo/medical-technologist-doing-blood-draw-services-patient-lab-assistant-with-sterile-rubber-gloves-taking-blood-sample-from-patient_657921-350.jpg?w=2000&t=st=1700976605~exp=1700977205~hmac=42afeaa99c10fe873ebbe14ec0b77fd58613951160ff13d336655fdfbb121c95"
-              alt=""
+              src={bmfBackground}
             />
           </div>
         </div>
