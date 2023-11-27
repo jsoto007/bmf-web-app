@@ -45,11 +45,13 @@ export default function About() {
         </div>
         {/* This is the photo in the middle of the page */}
         <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <img
-            className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-            src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-            alt=""
-          />
+          <div className='bg-sky-700 w-[48rem]  sm:w-[57rem] max-w-none rounded-xl'>
+            <img
+              className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] opacity-70"
+              src="https://img.freepik.com/free-photo/medical-technologist-doing-blood-draw-services-patient-lab-assistant-with-sterile-rubber-gloves-taking-blood-sample-from-patient_657921-350.jpg?w=2000&t=st=1700976605~exp=1700977205~hmac=42afeaa99c10fe873ebbe14ec0b77fd58613951160ff13d336655fdfbb121c95"
+              alt=""
+            />
+          </div>
         </div>
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
