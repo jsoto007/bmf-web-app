@@ -1,8 +1,11 @@
 import React from 'react';
 import bmfBackground from '../../../public/bmfBackground.jpg'
+import calendar from '../../../public/calendar.svg'
+import bookMark from '../../../public/bookMark.svg'
 import Image from 'next/image';
 
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import {BookOpenIcon, BookmarkSlashIcon, BookmarkSquareIcon, CalendarDays, CalendarDaysIcon, CalendarIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import { BookmarkIcon } from '@heroicons/react/24/outline';
 
 export default function About() {
   return (
@@ -62,24 +65,26 @@ export default function About() {
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
                 <li className="flex gap-x-3">
-                  <CloudArrowUpIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                <CalendarDaysIcon className="mt-1 h-5 w-5 flex-none fill-indigo-600" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-gray-900">Push to deploy.</strong> Lorem ipsum, dolor sit amet
-                    consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-                    blanditiis ratione.
+                    <strong className="font-semibold text-gray-900">Schedule an appointment</strong> Schedule your appointment and our team representative will confirm the time that works for you.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
-                  <LockClosedIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                  <Image 
+                    className="mt-1 h-5 w-5 flex-none fill-indigo-600"
+                    src={bookMark}
+                  />
+
                   <span>
-                    <strong className="font-semibold text-gray-900">SSL certificates.</strong> Anim aute id magna aliqua
+                    <strong className="font-semibold text-indigo-600">SSL certificates.</strong> Anim aute id magna aliqua
                     ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
-                  <ServerIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                  <BookmarkSquareIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-gray-900">Database backups.</strong> Ac tincidunt sapien
+                    <strong className="font-semibold text-indigo-600">Database backups.</strong> Ac tincidunt sapien
                     vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
                   </span>
                 </li>
