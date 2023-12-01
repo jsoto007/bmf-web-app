@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import bmfLogoP from "../../../public/bmfLogoP.png"
 import bmfLogoDropP from "../../../public/bmfLogoDropP.png"
+import arrow from "../../../public/arrow.svg"
 import { Dialog } from '@headlessui/react'
 import { ArrowDownCircleIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -64,6 +65,7 @@ export default function Example() {
                   <Image 
                   className="h-12 w-auto"
                   src={bmfLogoDropP}
+                  alt='BMF logo'
                   />
                 </a>
                 <button
@@ -114,6 +116,7 @@ export default function Example() {
                 <Image 
                   className='lg:h-80 md:h-80 sm:h-50 w-auto -mr-12 sm:-mr-12 -mt-16 drop-shadow-xl border-s-orange-700 '
                   src={bmfLogoDropP}
+                  alt='BMF logo'
                 />
 
                 <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl font-serif drop-shadow-xl sm:-pr-8">
@@ -134,7 +137,7 @@ export default function Example() {
                   Learn more <span aria-hidden="true">→</span>
                 </a>
               </div>
-          <ArrowDownCircleIcon className='text-red-700 mt-20 h-8 items-center'/>
+              <h1 className='text-slate-600 mt-20 h-10 text-2xl'>↓</h1>
             </div>
           </div>
           <div
