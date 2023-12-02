@@ -67,21 +67,19 @@ export default function About() {
                 <li className="flex gap-x-3">
                 <CalendarDaysIcon className="mt-1 h-5 w-5 flex-none fill-indigo-600" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-gray-900">Schedule an appointment</strong> Schedule your appointment and our team representative will confirm the time that works for you.
+                    <strong className="font-semibold text-gray-900">Schedule an appointment.</strong> Schedule your appointment and our team representative will confirm the time that works for you.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
                 <BookmarkSquareIcon className="mt-1 h-5 w-5 flex-none fill-indigo-600" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-gray-900">SSL certificates.</strong> Anim aute id magna aliqua
-                    ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+                    <strong className="font-semibold text-gray-900">Blood draw.</strong> A qualified professional from our team will collect your blood sample while adhering to rigorous safety standards.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
                   <TruckIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-gray-900">Database backups.</strong> Ac tincidunt sapien
-                    vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+                    <strong className="font-semibold text-gray-900">Secure delivery.</strong> The blood sample will be carefully and professionally packaged to ensure a secure delivery to the laboratory.
                   </span>
                 </li>
               </ul>
