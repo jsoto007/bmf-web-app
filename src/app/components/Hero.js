@@ -137,7 +137,6 @@ export default function Example() {
                   Learn more <span aria-hidden="true">→</span>
                 </a>
               </div>
-                <h1 className='text-slate-600 mt-20 h-10 text-2xl'>↓</h1>
             </div>
           </div>
           <div

@@ -5,7 +5,7 @@ import bookMark from '../../../public/bookMark.svg'
 import Image from 'next/image';
 
 import {BookOpenIcon, BookmarkSlashIcon, BookmarkSquareIcon, CalendarDays, CalendarDaysIcon, CalendarIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
-import { ArrowDownCircleIcon, BookmarkIcon, ChevronDoubleRightIcon } from '@heroicons/react/24/outline';
+import { ArrowDownCircleIcon, BookmarkIcon, ChevronDoubleRightIcon, TruckIcon } from '@heroicons/react/24/outline';
 
 export default function About() {
   return (
@@ -78,7 +78,7 @@ export default function About() {
                   </span>
                 </li>
                 <li className="flex gap-x-3">
-                  <ChevronDoubleRightIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                  <TruckIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>
                     <strong className="font-semibold text-gray-900">Database backups.</strong> Ac tincidunt sapien
                     vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
