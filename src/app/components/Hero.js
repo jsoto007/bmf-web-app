@@ -30,6 +30,7 @@ export default function Example() {
                       <Image 
                         className='h-10 w-auto'
                         src={bmfLogoP}
+                        alt='Burdier Mobile Phlebotomy logo'
                       />
                     </a>
                   

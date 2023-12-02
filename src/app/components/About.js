@@ -54,6 +54,7 @@ export default function About() {
             <Image
               className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] opacity-70"
               src={bmfBackground}
+              alt='Wemen taking a blood sample from a patient'
             />
           </div>
         </div>
