@@ -5,7 +5,8 @@ import bmfLogoP from "../../../public/bmfLogoP.png"
 import bmfLogoDropP from "../../../public/bmfLogoDropP.png"
 import arrow from "../../../public/arrow.svg"
 import { Dialog } from '@headlessui/react'
-import { ArrowDownCircleIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { PhoneIcon } from '@heroicons/react/20/solid'
 
 const navigation = [
   { name: 'About', href: '#' },
@@ -125,6 +126,9 @@ export default function Example() {
               </div>
               <p className="mt-6 text-lg leading-8 text-gray-600">
               We provide safe and high-quality phlebotomy services in the comfort of your home while strictly adhering to safety standards.
+              </p>
+              <p className='text-slate-800 text-sm font-mono'>
+                <span className='text-indigo-600 text-2xl'>☎</span>(516) 508 1898
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
