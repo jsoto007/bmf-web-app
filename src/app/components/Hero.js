@@ -6,7 +6,7 @@ import bmfLogoDropP from "../../../public/bmfLogoDropP.png"
 import arrow from "../../../public/arrow.svg"
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { PhoneIcon } from '@heroicons/react/20/solid'
+
 
 const navigation = [
   { name: 'About', href: '#' },
