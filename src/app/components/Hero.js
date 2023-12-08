@@ -8,15 +8,15 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 
-const navigation = [
-  { name: 'About', href: '#' },
-  { name: 'Product', href: '#' },
-  { name: 'Scheduling', href: '#' },
-  { name: 'Company', href: '#' },
-]
-
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  
+  const navigation = [
+    { name: 'About', href: '#' },
+    { name: 'Product', href: '#' },
+    { name: 'Scheduling', href: '#' },
+    { name: 'Company', href: '#' },
+  ]
 
   return (
     <div className="bg-white">
