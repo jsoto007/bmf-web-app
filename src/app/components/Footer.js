@@ -47,18 +47,17 @@ export default function Footer() {
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl">Work with us</h2>
           <p className="mt-6 text-lg leading-8 text-slate-700">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-            fugiat veniam occaecat fugiat aliqua.
+          Schedule a safe and comfortable phlebotomy appointment with us for top-quality care. Book now!
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-slate-800 sm:grid-cols-2 md:flex lg:gap-x-10">
+          {/* <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-slate-800 sm:grid-cols-2 md:flex lg:gap-x-10">
             {links.map((link) => (
               <a key={link.name} href={link.href}>
                 {link.name} <span aria-hidden="true">&rarr;</span>
               </a>
             ))}
-          </div>
+          </div> */}
           <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.name} className="flex flex-col-reverse">
