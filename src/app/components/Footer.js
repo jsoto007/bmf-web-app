@@ -10,11 +10,12 @@ export default function Footer() {
     { name: 'Meet our leadership', href: '#' },
   ]
   const stats = [
-    { name: 'Offices worldwide', value: '12' },
-    { name: 'Full-time colleagues', value: '300+' },
-    { name: 'Hours per week', value: '40' },
-    { name: 'Paid time off', value: 'Unlimited' },
+    { name: 'Available in the Try State Area', value: '📍' },
+    { name: 'Years of Industry  Experience', value: '20+' },
+    { name: 'Flexible Scheduling', value: '🗓️' },
+    { name: 'Secure Sample Transfer', value: 'Security' },
   ]
+
 
   return (
     <div className="relative isolate overflow-hidden bg-neutral-100 py-24 sm:py-32">
