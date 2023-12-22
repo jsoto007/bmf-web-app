@@ -1,11 +1,9 @@
 import React from 'react';
 import bmfBackground from '../../../public/bmfBackground.jpg'
-import calendar from '../../../public/calendar.svg'
-import bookMark from '../../../public/bookMark.svg'
 import Image from 'next/image';
 
-import {BookOpenIcon, BookmarkSlashIcon, BookmarkSquareIcon, CalendarDays, CalendarDaysIcon, CalendarIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
-import { ArrowDownCircleIcon, BookmarkIcon, ChevronDoubleRightIcon, TruckIcon } from '@heroicons/react/24/outline';
+import { BookmarkSquareIcon, CalendarDaysIcon} from '@heroicons/react/20/solid'
+import { TruckIcon } from '@heroicons/react/24/outline';
 
 export default function About() {
   return (
