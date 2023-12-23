@@ -43,7 +43,14 @@ export default function Footer() {
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl">Work with us</h2>
           <p className="mt-6 text-lg leading-8 text-slate-700">
-          Schedule a safe and comfortable phlebotomy appointment with us for top-quality care. Book now!
+          Schedule a safe and comfortable phlebotomy appointment with us for top-quality care.
+                <a
+                  href="https://calendly.com/jsoto7087/burdier-mobile-phlebotomy"
+                  target='_blank'
+                  className="rounded-md ml-2 bg-indigo-600 px-2 py-1 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                   Book now!
+                </a>
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
@@ -57,7 +64,7 @@ export default function Footer() {
           </dl>
         </div>
         <hr className="font-bold sm:mt-2 md:mt-10 lg:mt-20"/>
-          <div className="text-slate-700 items-center sm:mt-2 md:mt-5 lg:mt-10 text-sm">
+          <div className="text-slate-700 items-center sm:mt-5 md:mt-8 lg:mt-12 text-sm">
               <ul className="text-slate-700">
                 <li>
                   Copyright © {year} - All Rights Reserved
