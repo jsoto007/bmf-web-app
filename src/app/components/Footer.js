@@ -1,13 +1,8 @@
+"use client"
 import React from "react";
 
 export default function Footer() {
-  
-  const links = [
-    { name: 'Open roles', href: '#' },
-    { name: 'Internship program', href: '#' },
-    { name: 'Our values', href: '#' },
-    { name: 'Meet our leadership', href: '#' },
-  ]
+
   const stats = [
     { name: 'Available in the Try State Area', value: '📍' },
     { name: 'Years of Industry  Experience', value: '20+' },
@@ -15,6 +10,8 @@ export default function Footer() {
     { name: 'Secure Sample Transfer', value: 'Security' },
   ]
 
+  const d = new Date();
+  let year = d.getFullYear();
 
   return (
     <div className="relative isolate overflow-hidden bg-neutral-100 py-24 sm:py-32">
@@ -59,6 +56,14 @@ export default function Footer() {
             ))}
           </dl>
         </div>
+        <hr className="font-bold sm:mt-2 md:mt-10 lg:mt-20"/>
+          <div className="text-slate-700 items-center sm:mt-2 md:mt-5 lg:mt-10 text-sm">
+              <ul className="text-slate-700">
+                <li>
+                  Copyright © {year} - All Rights Reserved
+                </li>
+              </ul>
+          </div>
       </div>
     </div>
   )
