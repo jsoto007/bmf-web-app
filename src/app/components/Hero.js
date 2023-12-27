@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import bmfLogoP from "../../../public/bmfLogoP.png"
 import bmfLogoDropP from "../../../public/bmfLogoDropP.png"
-import arrow from "../../../public/arrow.svg"
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -13,7 +12,6 @@ export default function Example() {
   
   const navigation = [
     { name: 'About', href: '#' },
-    { name: 'Product', href: '#' },
     { name: 'Scheduling', href: 'https://calendly.com/jsoto7087/burdier-mobile-phlebotomy' },
     { name: 'Company', href: '#' },
   ]

@@ -7,14 +7,14 @@ export default function Footer() {
     { name: 'Available in the Try State Area', value: '📍' },
     { name: 'Years of Industry  Experience', value: '20+' },
     { name: 'Flexible Scheduling', value: '🗓️' },
-    { name: 'Secure Sample Transfer', value: 'Security' },
+    { name: 'Sample In the Safety of Your Home', value: 'Security' },
   ]
 
   const d = new Date();
   let year = d.getFullYear();
 
   return (
-    <div className="relative isolate overflow-hidden bg-neutral-100 py-24 sm:py-32">
+    <div className="relative isolate overflow-hidden bg-neutral-100 py-24 sm:py-32" id="footer">
       <div
         className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
         aria-hidden="true"
