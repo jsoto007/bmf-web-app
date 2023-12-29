@@ -67,7 +67,7 @@ export default function Footer() {
           <div className="text-slate-700 items-center sm:mt-5 md:mt-8 lg:mt-12 text-sm">
               <ul className="text-slate-700">
                 <li>
-                  Copyright © {year} - All Rights Reserved
+                  Copyright © {year} - All Rights Reserved Powered by JSoto
                 </li>
               </ul>
           </div>
