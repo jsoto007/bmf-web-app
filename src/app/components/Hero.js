@@ -12,13 +12,13 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   
   const navigation = [
-    { name: 'About', href: '#' },
-    { name: 'Scheduling', href: 'https://calendly.com/jsoto7087/burdier-mobile-phlebotomy' },
-    { name: 'Company', href: '#' },
+    { name: 'About', to: "about" },
+    { name: 'Scheduling', to: "footer" },
+    { name: 'Company', to: "home" },
   ]
 
   return (
-    <div className="bg-white">
+    <div className="bg-white" id='home'>
       <div className="">
         <header className="absolute inset-x-0 top-0 z-50">
           <div className='fixed w-full top-0 backdrop-blur-md bg-neutral-100/10'>
@@ -46,9 +46,13 @@ export default function Example() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12 ">
                   {navigation.map((item) => (
-                    <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
-                      {item.name}
-                    </a>
+                    <button>
+                      <Link to={item.to} smooth={true} duration={200} offset={40}>
+                        <a key={item.name} className="text-sm font-semibold leading-6 text-gray-900">
+                          {item.name}
+                        </a>
+                      </Link>
+                    </button>
                   ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end ">
