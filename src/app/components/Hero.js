@@ -48,9 +48,9 @@ export default function Example() {
                   {navigation.map((item) => (
                     <button key={item.name}>
                       <Link to={item.to} smooth={true} duration={200} offset={40}>
-                        <li className="text-sm font-semibold leading-6 text-gray-900">
+                        <ul className="text-sm font-semibold leading-6 text-gray-900">
                           {item.name}
-                        </li>
+                        </ul>
                       </Link>
                     </button>
                   ))}
