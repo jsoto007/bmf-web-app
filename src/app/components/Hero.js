@@ -46,11 +46,11 @@ export default function Example() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12 ">
                   {navigation.map((item) => (
-                    <button>
+                    <button key={item.name}>
                       <Link to={item.to} smooth={true} duration={200} offset={40}>
-                        <a key={item.name} className="text-sm font-semibold leading-6 text-gray-900">
+                        <li className="text-sm font-semibold leading-6 text-gray-900">
                           {item.name}
-                        </a>
+                        </li>
                       </Link>
                     </button>
                   ))}

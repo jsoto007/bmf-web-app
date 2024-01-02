@@ -14,10 +14,11 @@ export default function Footer() {
   let year = d.getFullYear();
 
   return (
-    <div className="relative isolate overflow-hidden bg-neutral-100 py-24 sm:py-32" id="footer">
+    <div className="relative isolate overflow-hidden bg-neutral-100 py-24 sm:py-32" >
       <div
         className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
         aria-hidden="true"
+        id="footer"
       >
         <div
           className="aspect-[1097/845] w-[68.5625rem]  opacity-20"
