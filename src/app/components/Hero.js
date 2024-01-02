@@ -5,6 +5,7 @@ import bmfLogoP from "../../../public/bmfLogoP.png"
 import bmfLogoDropP from "../../../public/bmfLogoDropP.png"
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link } from "react-scroll/modules"
 
 
 export default function Example() {
