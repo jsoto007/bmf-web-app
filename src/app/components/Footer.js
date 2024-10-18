@@ -45,7 +45,7 @@ export default function Footer() {
           <p className="mt-6 text-lg leading-8 text-slate-700">
           Schedule a safe and comfortable phlebotomy appointment with us for top-quality care.
                 <a
-                  href="https://calendly.com/jsoto7087/burdier-mobile-phlebotomy"
+                  href="https://calendly.com/burdiercorp/30min?back=1"
                   target='_blank'
                   className="rounded-md ml-2 bg-indigo-600 px-2 py-1 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
