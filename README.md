@@ -1,37 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Burdier Mobile Phlebotomy — website
 
-## Getting Started
+Single-page marketing site for [burdiermobilephlebotomy.com](https://burdiermobilephlebotomy.com), built with Next.js 14 (App Router), React 18 and CSS Modules. It implements the v3 landing-page design handoff: one page aimed at **organizations** (who request a proposal) and **patients & families** (who book a home visit).
 
-First, run the development server:
+## Run it
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open <http://localhost:3000>. `npm run build && npm start` serves the production build; `npm run lint` runs ESLint.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Contact form delivery
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The form at `#contact` posts to `src/app/api/contact/route.js`, which validates the submission server-side and delivers it through one of two channels. Copy `.env.example` to `.env.local` and set **one**:
 
-## Learn More
+| Channel | Variables |
+| --- | --- |
+| Webhook (Zapier, Make, a CRM…) | `CONTACT_WEBHOOK_URL` — receives the submission as JSON |
+| Email via [Resend](https://resend.com) | `RESEND_API_KEY`, `CONTACT_TO_EMAIL` (comma-separate for several), `CONTACT_FROM_EMAIL` |
 
-To learn more about Next.js, take a look at the following resources:
+With neither set, development logs each submission to the terminal and reports success; production returns an error and the form shows the phone number as a fallback, so an unconfigured deploy never silently drops a lead.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Validation rules live in `src/lib/contact.js` and are shared by the form and the API route. A hidden honeypot field drops most bot submissions.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## SEO and AI readability
 
-## Deploy on Vercel
+- `src/lib/site.js` holds the canonical URL, title, description and keywords; `src/app/layout.js` turns them into metadata (Open Graph, Twitter card, robots directives, canonical).
+- `src/app/robots.js`, `sitemap.js` and `manifest.js` generate `/robots.txt`, `/sitemap.xml` and `/manifest.webmanifest`. Robots explicitly allows the major AI crawlers and blocks only `/api/`.
+- `src/lib/seo.js` builds a Schema.org graph (MedicalBusiness, WebSite, WebPage, FAQPage, HowTo and the service catalog) from `content.js`, rendered as JSON-LD on the page.
+- `/llms.txt` and `/llms-full.txt` (route handlers in `src/app/`) publish the site as plain Markdown for AI assistants, generated from the same `content.js`, so they never drift from the page.
+- `public/og-image.png` is the 1200×630 social preview. Regenerate it if the headline changes.
+- After claiming the domain in Google Search Console, set `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` to emit the verification tag.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Where things live
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# bmf-web-app
+```
+src/app/
+  layout.js          fonts (Cormorant Garamond, Lora via next/font), metadata
+  page.js            section order + JSON-LD
+  robots.js, sitemap.js, manifest.js
+  llms.txt/, llms-full.txt/   plain-text routes for AI assistants
+  globals.css        design tokens, base reset, shared classes (.btn, .card, .input, .kicker…)
+  content.js         all page copy
+  components/        one component + CSS module per section
+  api/contact/       form endpoint
+src/lib/contact.js   form schema + validation shared by client and server
+src/lib/site.js      canonical URL, SEO title/description, keywords
+src/lib/seo.js       JSON-LD graph and llms.txt generators
+public/              hero photo, logo, social image
+```
+
+Design tokens (colors, type, spacing, shadows) are CSS custom properties on `:root` in `globals.css`; they match the "Classical" design system from the handoff. Every multi-column layout uses `auto-fit`/`minmax` grids and fluid `clamp()` type, so the only explicit breakpoint is the mobile navigation (below 860px).
+
+## Content to confirm with the client
+
+Several claims were written for the redesign and are not on the previous site:
+
+- The four service lines, and the program and coordinator details.
+- "Within one business day" response time.
+- "Most requested" on Recurring rounds.
+- The chain-of-custody and privacy statements.
+
+The "3×" and "40+ hours" figures come from SotoDev's public case study on Burdier (2024).

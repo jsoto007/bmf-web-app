@@ -1,0 +1,76 @@
+.footer {
+  background: var(--color-neutral-900);
+  color: var(--color-bg);
+}
+
+.inner {
+  padding-block: clamp(64px, 8vw, 104px) 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2vw, 28px);
+}
+
+.logo {
+  height: clamp(64px, 8vw, 112px);
+  width: auto;
+}
+
+.name {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(52px, 8vw, 128px);
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  font-size: 14px;
+}
+
+.link {
+  color: var(--color-bg);
+  text-decoration-color: var(--paper-20);
+}
+
+.link:hover {
+  color: var(--color-accent-300);
+  text-decoration-color: var(--color-accent-300);
+}
+
+.phone {
+  color: var(--color-accent-300);
+  text-decoration-color: var(--paper-20);
+}
+
+.phone:hover {
+  color: var(--color-accent-200);
+  text-decoration-color: var(--color-accent-300);
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--paper-20);
+  font-size: 13px;
+  color: var(--paper-70);
+}
