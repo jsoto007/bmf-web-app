@@ -1,0 +1,188 @@
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: 56px clamp(40px, 6vw, 112px);
+  padding: clamp(72px, 9vw, 128px) 0 clamp(88px, 11vw, 160px);
+  border-top: 1px solid var(--color-text);
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+}
+
+.kicker {
+  margin-bottom: 24px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: clamp(44px, 5.8vw, 84px);
+  line-height: 0.95;
+  letter-spacing: -0.028em;
+  margin: 0 0 28px;
+  text-wrap: balance;
+}
+
+.lede {
+  font-size: 16.5px;
+  line-height: 1.7;
+  margin: 0 0 44px;
+  max-width: 42ch;
+  color: var(--ink-80);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-divider);
+  margin-top: auto;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-divider);
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+a.infoRow:hover {
+  color: var(--color-accent-700);
+}
+
+.infoLabel {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-66);
+}
+
+.infoValue {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  line-height: 1;
+  text-align: right;
+}
+
+.panel {
+  padding: clamp(28px, 3.5vw, 52px);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-md);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Segmented control */
+.seg {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-md);
+}
+
+.segOpt {
+  position: relative;
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.segOpt + .segOpt {
+  border-left: 1px solid var(--color-divider);
+}
+
+.segOpt:hover {
+  background: color-mix(in srgb, var(--color-text) 7%, transparent);
+}
+
+.segOn,
+.segOn:hover {
+  color: var(--color-accent);
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--color-accent);
+}
+
+.segInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.segOpt:has(.segInput:focus-visible) {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.trap {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.alert {
+  padding: 14px 16px;
+  border: 1px solid #a4423a;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, #a4423a 7%, transparent);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.submit {
+  padding: 14px 20px;
+  font-size: 15.5px;
+}
+
+/* Success state */
+.success {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 32px 0;
+}
+
+.successTitle {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.successBody {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--ink-80);
+}
