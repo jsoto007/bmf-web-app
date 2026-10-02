@@ -1,0 +1,15 @@
+# Netlify configuration — Next.js 14 App Router via Netlify's Next.js Runtime.
+# Route handlers (/api/contact, /llms.txt …) run as Netlify Functions; static
+# pages are served from the CDN. Set the contact-form env vars in the Netlify
+# UI (Site configuration → Environment variables); see .env.example.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20.19.0"
+  NPM_FLAGS = "--no-audit --no-fund"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

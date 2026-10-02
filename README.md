@@ -1,6 +1,6 @@
 # Burdier Mobile Phlebotomy — website
 
-Single-page marketing site for [burdiermobilephlebotomy.com](https://burdiermobilephlebotomy.com), built with Next.js 14 (App Router), React 18 and CSS Modules. It implements the v3 landing-page design handoff: one page aimed at **organizations** (who request a proposal) and **patients & families** (who book a home visit).
+Single-page marketing site for [burdiermobilephlebotomy.com](https://burdiermobilephlebotomy.com), built with Next.js 16 (App Router), React 19 and CSS Modules. It implements the v3 landing-page design handoff: one page aimed at **organizations** (who request a proposal) and **patients & families** (who book a home visit).
 
 ## Run it
 
@@ -9,7 +9,12 @@ npm install
 npm run dev
 ```
 
-Open <http://localhost:3000>. `npm run build && npm start` serves the production build; `npm run lint` runs ESLint.
+Requires Node 20.9 or newer (`.nvmrc` pins 20.19). Open <http://localhost:3000>. `npm run build && npm start` serves the production build; `npm run lint` runs ESLint. `scripts/smoke.sh` (after a build) starts the production server and checks every public route and the form endpoint's validation paths — the same script CI runs.
+
+## CI and deployment
+
+- **CI:** `.github/workflows/ci.yml` runs lint, build and the smoke test on every pull request and on pushes to `main`.
+- **Netlify:** `netlify.toml` builds with Node 20 through Netlify's Next.js Runtime, so route handlers (`/api/contact`, `/llms.txt`, …) run as functions and static pages are served from the CDN. Connect the repo in Netlify, keep the defaults the file provides, and add the contact-form environment variables (below) in *Site configuration → Environment variables*. Security headers come from `next.config.js`.
 
 ## Contact form delivery
 
@@ -37,7 +42,8 @@ Validation rules live in `src/lib/contact.js` and are shared by the form and the
 
 ```
 src/app/
-  layout.js          fonts (Cormorant Garamond, Lora via next/font), metadata
+  layout.js          fonts (self-hosted Cormorant Garamond + Lora via next/font/local), metadata
+  fonts/             the two variable .woff2 files
   page.js            section order + JSON-LD
   robots.js, sitemap.js, manifest.js
   llms.txt/, llms-full.txt/   plain-text routes for AI assistants
