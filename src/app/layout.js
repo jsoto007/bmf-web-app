@@ -1,21 +1,25 @@
-import { Cormorant_Garamond, Lora } from 'next/font/google'
+import localFont from 'next/font/local'
 import { KEYWORDS, LEGAL_NAME, OG_IMAGE, SEO_DESCRIPTION, SEO_TITLE, SITE_NAME, SITE_URL } from '@/lib/site'
 import './globals.css'
 
-const cormorant = Cormorant_Garamond({
-  subsets: ['latin'],
-  weight: ['400', '600'],
-  style: ['normal'],
+// Self-hosted variable fonts (see src/app/fonts/README.md). Weights 400 and
+// 600 are the only ones the design uses; nothing is synthesised.
+const cormorant = localFont({
+  src: './fonts/CormorantGaramond.woff2',
+  weight: '400 600',
+  style: 'normal',
   display: 'swap',
   variable: '--font-cormorant',
+  fallback: ['Georgia', 'serif'],
 })
 
-const lora = Lora({
-  subsets: ['latin'],
-  weight: ['400', '600'],
-  style: ['normal'],
+const lora = localFont({
+  src: './fonts/Lora.woff2',
+  weight: '400 600',
+  style: 'normal',
   display: 'swap',
   variable: '--font-lora',
+  fallback: ['Georgia', 'serif'],
 })
 
 export const metadata = {
