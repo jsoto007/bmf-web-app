@@ -37,6 +37,8 @@ Validation rules live in `src/lib/contact.js` and are shared by the form and the
 - `/llms.txt` and `/llms-full.txt` (route handlers in `src/app/`) publish the site as plain Markdown for AI assistants, generated from the same `content.js`, so they never drift from the page.
 - `public/og-image.png` is the 1200×630 social preview. Regenerate it if the headline changes.
 - After claiming the domain in Google Search Console, set `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` to emit the verification tag.
+- `netlify.toml` 301-redirects `www.` and the `*.netlify.app` host to the apex domain so there is one canonical URL. The sitemap carries image entries, and the Schema.org `WebPage` has `datePublished` / `dateModified` — bump `PAGE_MODIFIED` in `src/lib/site.js` when page content changes.
+- `src/app/not-found.js` returns a real 404 (noindex) with links back, so dead links never become soft-404s. Fonts use size-adjusted fallbacks to avoid layout shift, and `next/image` serves AVIF/WebP.
 
 ## Where things live
 

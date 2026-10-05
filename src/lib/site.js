@@ -27,6 +27,17 @@ export const KEYWORDS = [
   'Tri-State Area',
 ]
 
+/** ISO dates for structured data and the sitemap. Bump PAGE_MODIFIED when page content changes. */
+export const PAGE_PUBLISHED = '2026-10-01'
+export const PAGE_MODIFIED = '2026-10-08'
+
+export const HERO_IMAGE = {
+  url: `${SITE_URL}/bmfBackground.jpg`,
+  width: 2000,
+  height: 1333,
+  caption: 'A Burdier phlebotomist drawing a blood sample during a home visit',
+}
+
 export const STATES_SERVED = ['New York', 'New Jersey', 'Connecticut']
 export const STATE_CODES = ['US-NY', 'US-NJ', 'US-CT']
 

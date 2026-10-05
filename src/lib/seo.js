@@ -1,6 +1,6 @@
 import { DOORS, FAQ, HERO, PROCESS, PROGRAMS, SERVICES, STANDARDS } from '@/app/content'
 import { PHONE_DISPLAY } from '@/lib/contact'
-import { LEGAL_NAME, OG_IMAGE, SEO_DESCRIPTION, SEO_TITLE, SITE_NAME, SITE_URL, STATES_SERVED, STATE_CODES } from '@/lib/site'
+import { HERO_IMAGE, LEGAL_NAME, OG_IMAGE, PAGE_MODIFIED, PAGE_PUBLISHED, SEO_DESCRIPTION, SEO_TITLE, SITE_NAME, SITE_URL, STATES_SERVED, STATE_CODES } from '@/lib/site'
 
 const ORG_ID = `${SITE_URL}/#organization`
 const SITE_ID = `${SITE_URL}/#website`
@@ -73,10 +73,21 @@ export function structuredData() {
         name: SEO_TITLE,
         description: SEO_DESCRIPTION,
         inLanguage: 'en-US',
+        datePublished: PAGE_PUBLISHED,
+        dateModified: PAGE_MODIFIED,
         isPartOf: { '@id': SITE_ID },
         about: { '@id': ORG_ID },
         primaryImageOfPage: { '@type': 'ImageObject', url: OG_IMAGE.url, width: OG_IMAGE.width, height: OG_IMAGE.height },
+        image: [
+          { '@type': 'ImageObject', url: OG_IMAGE.url, width: OG_IMAGE.width, height: OG_IMAGE.height },
+          { '@type': 'ImageObject', url: HERO_IMAGE.url, width: HERO_IMAGE.width, height: HERO_IMAGE.height, caption: HERO_IMAGE.caption },
+        ],
         mainEntity: { '@id': ORG_ID },
+        potentialAction: {
+          '@type': 'CommunicateAction',
+          name: 'Request a proposal or book a home visit',
+          target: `${SITE_URL}/#contact`,
+        },
       },
       {
         '@type': 'FAQPage',
