@@ -29,7 +29,7 @@ export const KEYWORDS = [
 
 /** ISO dates for structured data and the sitemap. Bump PAGE_MODIFIED when page content changes. */
 export const PAGE_PUBLISHED = '2026-10-01'
-export const PAGE_MODIFIED = '2026-10-08'
+export const PAGE_MODIFIED = '2026-10-05'
 
 export const HERO_IMAGE = {
   url: `${SITE_URL}/bmfBackground.jpg`,
