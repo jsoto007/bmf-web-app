@@ -1,6 +1,7 @@
 import { AudienceProvider } from './components/AudienceContext'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
+import TrustBar from './components/TrustBar'
 import Doors from './components/Doors'
 import Services from './components/Services'
 import Process from './components/Process'
@@ -18,6 +19,7 @@ export default function Home() {
       <main id="main">
         <div className="container">
           <Hero />
+          <TrustBar />
           <Doors />
           <Services />
           <Process />

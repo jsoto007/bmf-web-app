@@ -44,7 +44,7 @@
 .body {
   font-size: 15.5px;
   line-height: 1.65;
-  color: var(--ink-80);
+  color: var(--ink-body);
 }
 
 .audience {
@@ -53,7 +53,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   line-height: 1.8;
-  color: var(--ink-64);
+  color: var(--ink-caption);
 }
 
 @media (max-width: 600px) {

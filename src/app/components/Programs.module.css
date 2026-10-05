@@ -21,7 +21,8 @@
 }
 
 .plan.featured {
-  border-color: var(--color-accent);
+  border-color: var(--color-accent-600);
+  box-shadow: 0 0 0 1px var(--color-accent-600), var(--shadow-md);
 }
 
 .head {
@@ -42,7 +43,7 @@
 .best {
   font-size: 15px;
   line-height: 1.6;
-  color: var(--ink-78);
+  color: var(--ink-muted);
 }
 
 .items {
