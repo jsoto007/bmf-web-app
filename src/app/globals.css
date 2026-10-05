@@ -8,11 +8,12 @@
 
 :root {
   /* Colors */
-  --color-bg: #f3f2f2;
-  --color-surface: #eae9e9;
+  --color-bg: #faf9f7;
+  --color-surface: #f1efec;
+  --color-card: #ffffff;
   --color-text: #201f1d;
   --color-accent: #b68235;
-  --color-divider: color-mix(in srgb, var(--color-text) 16%, transparent);
+  --color-divider: color-mix(in srgb, var(--color-text) 18%, transparent);
 
   --color-neutral-100: #f8f4f4;
   --color-neutral-200: #eae7e7;
@@ -34,21 +35,18 @@
   --color-accent-800: #5a3b0a;
   --color-accent-900: #3a270d;
 
-  /* Muted ink, by role */
-  --ink-64: color-mix(in srgb, var(--color-text) 64%, transparent);
-  --ink-66: color-mix(in srgb, var(--color-text) 66%, transparent);
-  --ink-68: color-mix(in srgb, var(--color-text) 68%, transparent);
-  --ink-70: color-mix(in srgb, var(--color-text) 70%, transparent);
-  --ink-76: color-mix(in srgb, var(--color-text) 76%, transparent);
-  --ink-78: color-mix(in srgb, var(--color-text) 78%, transparent);
-  --ink-80: color-mix(in srgb, var(--color-text) 80%, transparent);
+  /* Muted ink, by role. Every step clears WCAG AA against --color-bg:
+     caption 5.9:1 · label 7:1 · muted 9:1 · body 10.5:1. */
+  --ink-caption: color-mix(in srgb, var(--color-text) 74%, transparent);
+  --ink-label: color-mix(in srgb, var(--color-text) 80%, transparent);
+  --ink-muted: color-mix(in srgb, var(--color-text) 86%, transparent);
+  --ink-body: color-mix(in srgb, var(--color-text) 90%, transparent);
 
   /* Paper (background color) at reduced opacity, for the dark bands */
-  --paper-20: color-mix(in srgb, var(--color-bg) 20%, transparent);
-  --paper-22: color-mix(in srgb, var(--color-bg) 22%, transparent);
-  --paper-70: color-mix(in srgb, var(--color-bg) 70%, transparent);
-  --paper-74: color-mix(in srgb, var(--color-bg) 74%, transparent);
-  --paper-80: color-mix(in srgb, var(--color-bg) 80%, transparent);
+  --paper-line: color-mix(in srgb, var(--color-bg) 24%, transparent);
+  --paper-caption: color-mix(in srgb, var(--color-bg) 78%, transparent);
+  --paper-muted: color-mix(in srgb, var(--color-bg) 84%, transparent);
+  --paper-body: color-mix(in srgb, var(--color-bg) 90%, transparent);
 
   /* Type. next/font sets --font-cormorant and --font-lora on <html>. */
   --font-heading: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
@@ -223,7 +221,7 @@ textarea {
 
 .kicker {
   display: block;
-  font-size: 11.5px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -247,7 +245,7 @@ textarea {
   font-size: 16.5px;
   line-height: 1.7;
   max-width: 46ch;
-  color: var(--ink-80);
+  color: var(--ink-body);
 }
 
 /* Section intro: kicker + H2 on the left, lede bottom-aligned on the right */
@@ -294,12 +292,13 @@ textarea {
 }
 
 .btn-primary {
-  color: var(--color-accent);
-  border-color: var(--color-accent);
+  color: var(--color-accent-700);
+  border-color: var(--color-accent-600);
 }
 
 .btn-primary:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-800);
+  border-color: var(--color-accent-700);
   background: color-mix(in srgb, var(--color-accent) 12%, transparent);
 }
 
@@ -308,12 +307,12 @@ textarea {
 }
 
 .btn-ghost {
-  color: var(--color-accent);
+  color: var(--color-accent-700);
   padding-inline: var(--space-1);
 }
 
 .btn-ghost:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-800);
   background: color-mix(in srgb, var(--color-accent) 10%, transparent);
 }
 
@@ -336,8 +335,9 @@ textarea {
   display: flex;
   flex-direction: column;
   border-radius: var(--radius-md);
-  background: transparent;
+  background: var(--color-card);
   border: 1px solid var(--color-divider);
+  box-shadow: var(--shadow-sm);
 }
 
 .tag-outline {
@@ -347,8 +347,8 @@ textarea {
   letter-spacing: 0.02em;
   padding: 3px 10px;
   border-radius: 3px;
-  border: 1px solid var(--color-accent);
-  color: var(--color-accent);
+  border: 1px solid var(--color-accent-600);
+  color: var(--color-accent-700);
   white-space: nowrap;
 }
 
@@ -370,7 +370,7 @@ textarea {
   display: block;
   font-size: 12px;
   margin-bottom: 5px;
-  color: var(--ink-70);
+  color: var(--ink-label);
 }
 
 .input {
@@ -380,14 +380,14 @@ textarea {
   font-size: 14px;
   color: var(--color-text);
   caret-color: var(--color-accent);
-  background: transparent;
-  border: 1px solid var(--color-divider);
+  background: var(--color-card);
+  border: 1px solid color-mix(in srgb, var(--color-text) 28%, transparent);
   border-radius: var(--radius-md);
   transition: border-color 0.2s;
 }
 
 .input::placeholder {
-  color: color-mix(in srgb, var(--color-text) 40%, transparent);
+  color: color-mix(in srgb, var(--color-text) 50%, transparent);
 }
 
 .input:hover {

@@ -11,6 +11,7 @@ const cormorant = localFont({
   display: 'swap',
   variable: '--font-cormorant',
   fallback: ['Georgia', 'serif'],
+  adjustFontFallback: 'Times New Roman', // size-adjusted serif fallback keeps layout stable while the font loads
 })
 
 const lora = localFont({
@@ -20,6 +21,7 @@ const lora = localFont({
   display: 'swap',
   variable: '--font-lora',
   fallback: ['Georgia', 'serif'],
+  adjustFontFallback: 'Times New Roman',
 })
 
 export const metadata = {
@@ -38,8 +40,10 @@ export const metadata = {
   referrer: 'origin-when-cross-origin',
   alternates: {
     canonical: '/',
+    languages: { 'en-US': '/', 'x-default': '/' },
     types: { 'text/plain': '/llms.txt' },
   },
+  appleWebApp: { title: 'Burdier', statusBarStyle: 'default' },
   robots: {
     index: true,
     follow: true,

@@ -13,3 +13,17 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# One canonical host: send www (and the netlify.app subdomain) to the apex so
+# search engines never see the same page under two URLs.
+[[redirects]]
+  from = "https://www.burdiermobilephlebotomy.com/*"
+  to = "https://burdiermobilephlebotomy.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://beamish-sunshine-90f67c.netlify.app/*"
+  to = "https://burdiermobilephlebotomy.com/:splat"
+  status = 301
+  force = true

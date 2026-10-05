@@ -220,6 +220,13 @@ export default function Contact() {
             <button type="submit" className={`btn btn-primary btn-block ${styles.submit}`} disabled={status === 'sending'}>
               {status === 'sending' ? 'Sending…' : copy.cta}
             </button>
+            <p className={styles.alt}>
+              Prefer to talk? Call{' '}
+              <a href={PHONE_HREF} className="tnum">
+                {PHONE_DISPLAY}
+              </a>
+              .
+            </p>
           </form>
         )}
       </div>

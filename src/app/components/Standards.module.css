@@ -28,7 +28,7 @@
   line-height: 1.7;
   align-self: flex-end;
   max-width: 46ch;
-  color: var(--paper-80);
+  color: var(--paper-body);
 }
 
 .figures {
@@ -36,7 +36,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 0 clamp(32px, 4vw, 64px);
-  border-top: 1px solid var(--paper-22);
+  border-top: 1px solid var(--paper-line);
 }
 
 .figure {
@@ -44,7 +44,7 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  border-bottom: 1px solid var(--paper-22);
+  border-bottom: 1px solid var(--paper-line);
 }
 
 .big {
@@ -65,7 +65,7 @@
   font-size: 15px;
   line-height: 1.6;
   max-width: 30ch;
-  color: var(--paper-80);
+  color: var(--paper-body);
 }
 
 .grid {
@@ -83,6 +83,10 @@
   gap: 14px;
 }
 
+.item > svg {
+  color: var(--color-accent);
+}
+
 .itemTitle {
   font-weight: 600;
   font-size: 23px;
@@ -93,5 +97,5 @@
 .itemBody {
   font-size: 14.5px;
   line-height: 1.65;
-  color: var(--paper-74);
+  color: var(--paper-muted);
 }

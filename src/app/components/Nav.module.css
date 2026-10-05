@@ -71,7 +71,7 @@
 }
 
 .link:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-700);
 }
 
 .cta {

@@ -29,7 +29,7 @@
   line-height: 1.7;
   margin: 0 0 44px;
   max-width: 42ch;
-  color: var(--ink-80);
+  color: var(--ink-body);
 }
 
 .info {
@@ -59,7 +59,7 @@ a.infoRow:hover {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--ink-66);
+  color: var(--ink-caption);
 }
 
 .infoValue {
@@ -71,7 +71,6 @@ a.infoRow:hover {
 
 .panel {
   padding: clamp(28px, 3.5vw, 52px);
-  background: var(--color-bg);
   box-shadow: var(--shadow-md);
 }
 
@@ -113,9 +112,9 @@ a.infoRow:hover {
 
 .segOn,
 .segOn:hover {
-  color: var(--color-accent);
-  background: transparent;
-  box-shadow: inset 0 0 0 1px var(--color-accent);
+  color: var(--color-accent-700);
+  background: var(--color-accent-100);
+  box-shadow: inset 0 0 0 1px var(--color-accent-600);
 }
 
 .segInput {
@@ -184,5 +183,13 @@ a.infoRow:hover {
 .successBody {
   font-size: 15.5px;
   line-height: 1.7;
-  color: var(--ink-80);
+  color: var(--ink-body);
+}
+
+.alt {
+  margin: -6px 0 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-muted);
 }
