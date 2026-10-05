@@ -9,12 +9,12 @@ npm install
 npm run dev
 ```
 
-Requires Node 20.9 or newer (`.nvmrc` pins 20.19). Open <http://localhost:3000>. `npm run build && npm start` serves the production build; `npm run lint` runs ESLint. `scripts/smoke.sh` (after a build) starts the production server and checks every public route and the form endpoint's validation paths — the same script CI runs.
+Requires Node 20.9 or newer (`.nvmrc` and Netlify pin 22). Open <http://localhost:3000>. `npm run build && npm start` serves the production build; `npm run lint` runs ESLint. `scripts/smoke.sh` (after a build) starts the production server and checks every public route and the form endpoint's validation paths — the same script CI runs.
 
 ## CI and deployment
 
 - **CI:** `.github/workflows/ci.yml` runs lint, build and the smoke test on every pull request and on pushes to `main`.
-- **Netlify:** `netlify.toml` builds with Node 20 through Netlify's Next.js Runtime, so route handlers (`/api/contact`, `/llms.txt`, …) run as functions and static pages are served from the CDN. Connect the repo in Netlify, keep the defaults the file provides, and add the contact-form environment variables (below) in *Site configuration → Environment variables*. Security headers come from `next.config.js`.
+- **Netlify:** `netlify.toml` builds with Node 22 through Netlify's Next.js Runtime, so route handlers (`/api/contact`, `/llms.txt`, …) run as functions and static pages are served from the CDN. Connect the repo in Netlify, keep the defaults the file provides, and add the contact-form environment variables (below) in *Site configuration → Environment variables*. Security headers come from `next.config.js`. Keep the repo root free of other ecosystems' manifests (`Pipfile`, `requirements.txt`, `Gemfile`…): Netlify's build image installs toolchains for any it finds, and a stray `Pipfile` once failed every build by demanding Python 3.8.
 
 ## Contact form delivery
 
